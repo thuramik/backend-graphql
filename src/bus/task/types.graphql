@@ -1,0 +1,19 @@
+type Task {
+    id: ID!
+    title: String!
+    description: String!
+    resolved: Boolean
+}
+
+input TaskInput {
+    title: String!
+    description: String!
+}
+
+input TaskUpdateInput {
+    resolved: Boolean!
+}
+
+type RemoveAllTasks {
+    count: Int!
+}

@@ -1,0 +1,18 @@
+type Customer {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+}
+
+input CustomerInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+}
+
+input LoginInput {
+    email: String!
+    password: String!
+}

@@ -1,0 +1,22 @@
+#import "../bus/customer/types.graphql"
+#import "../bus/task/types.graphql"
+
+type Query {
+    tasks: [Task!]!
+    task(id: ID!): Task!
+    me: Customer
+}
+
+type Mutation {
+    signUp(customer: CustomerInput!): Customer!
+    login(customer: LoginInput!): Customer!
+    logout: Customer!
+    addTask(task: TaskInput!): Task!
+    removeAllTasks: RemoveAllTasks!
+    removeTask(id: ID!): Task!
+    updateTask(id: ID!, task: TaskUpdateInput!): Task!
+}
+
+type Subscription {
+    taskAdded: Task!
+}
